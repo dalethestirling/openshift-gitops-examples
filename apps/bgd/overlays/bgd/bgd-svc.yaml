@@ -8,9 +8,12 @@ metadata:
   namespace: bgd
 spec:
   ports:
-  - port: 8080
+  - name: http-8080 
+    port: 8080
+    nodePort: 32329
     protocol: TCP
     targetPort: 8080
   selector:
     app: bgd
+  type: LoadBalancer
 ---
