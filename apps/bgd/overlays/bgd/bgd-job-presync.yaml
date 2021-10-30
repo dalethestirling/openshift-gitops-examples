@@ -8,7 +8,7 @@ spec:
   template:
     spec:
       containers:
-        - generateName: presync-
+      - generateName: presync-
         image: busybox
         command: ["exit",  "1"]
       restartPolicy: Never
