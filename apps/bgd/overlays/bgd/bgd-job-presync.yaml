@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: presync-
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+spec:
+  template:
+    spec:
+      containers:
+        - generateName: presync-
+        image: busybox
+        command: ["exit",  "1"]
+      restartPolicy: Never
+  backoffLimit: 4
