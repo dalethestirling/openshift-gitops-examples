@@ -4,6 +4,7 @@ metadata:
   generateName: presync-
   annotations:
     argocd.argoproj.io/hook: PreSync
+    job: test
 spec:
   template:
     spec:
