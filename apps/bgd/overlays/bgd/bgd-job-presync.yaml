@@ -11,6 +11,6 @@ spec:
       containers:
       - name: presync
         image: busybox
-        command: ["exit",  "1"]
+        command: ["/bin/sh", "-c", "exit",  "1"]
       restartPolicy: Never
   backoffLimit: 4
